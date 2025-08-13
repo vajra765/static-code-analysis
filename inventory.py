@@ -2,7 +2,6 @@ import json
 import logging
 from datetime import datetime
 
-# Global variable
 stock_data = {}
 
 def addItem(item="default", qty=0, logs=[]):
@@ -48,7 +47,7 @@ def checkLowItems(threshold=5):
 def main():
     addItem("apple", 10)
     addItem("banana", -2)
-    addItem(123, "ten")  # invalid types, no check
+    addItem(123, "ten")
     removeItem("apple", 3)
     removeItem("orange", 1)
     print("Apple stock:", getQty("apple"))
@@ -56,6 +55,6 @@ def main():
     saveData()
     loadData()
     printData()
-    eval("print('eval used')")  # dangerous
+    eval("print('eval used')")
 
 main()
